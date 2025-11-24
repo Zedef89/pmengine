@@ -1,0 +1,16 @@
+app = "pmengine"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  PORT = "3100"
+
+[http_service]
+  internal_port = 3100
+  force_https = true
+  auto_start_machines = true
+  auto_stop_machines = false
+  min_machines_running = 1
+brew install flyctl
+
