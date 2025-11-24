@@ -8,10 +8,11 @@ export const notion = new Client({
 });
 
 export const DB = {
-    CLIENT: "2b3aff70-8e2b-80e6-9d61-e28f1545a332",  // PM – Clients
-    PROJECT: "2b2aff70-8e2b-808b-9e7c-c7f70a51dcd1", // PM – Projects
-    TASK: "2b3aff70-8e2b-80f1-8021-fdda42e35acd",    // PM – Tasks
+    CLIENT: process.env.NOTION_DB_CLIENT,
+    PROJECT: process.env.NOTION_DB_PROJECT,
+    TASK: process.env.NOTION_DB_TASK,
 };
+
 
 // helper REST per query generica
 export async function notionQuery(databaseId: string) {
